@@ -18,3 +18,21 @@ Ping latency + flow statistics
 - Mininet
 - POX
 - Open vSwitch
+
+## Screenshots
+
+### Allowed Ping
+![Allowed Ping](allowed_ping.png)
+
+### Blocked Ping
+![Blocked Ping](blocked_ping.png)
+
+### Flow Table
+![Flow Table](flow_table.png)
+
+### Controller Logs
+![Controller Logs](controller_logs.png)
+
+###topology_and_ping.png
+![topology_and_ping](topology_and_ping.png)
+
