@@ -37,7 +37,7 @@ The goal of this project is to demonstrate:
 ### Step 1: Start POX Controller
 ```bash
 cd ~/pox
-./pox.py log.level --DEBUG openflow.of_01 misc.firewall_controller
+./pox.py log.level --DEBUG openflow.of_01 misc.path_tracing_controller
 ```
 
 ### Step 2: Run Mininet
