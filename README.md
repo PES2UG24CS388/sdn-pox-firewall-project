@@ -106,12 +106,12 @@ Expected:
 ---
 
 ### 🔹 Allowed Communication (h1 → h2)
-![Allowed](allowed.png)
+![Allowed_Ping](allowed_ping.png)
 
 ---
 
 ### 🔹 Blocked Communication (h1 → h3)
-![Blocked](blocked.png)
+![Blocked_ping](blocked_ping.png)
 
 ---
 
