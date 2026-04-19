@@ -1,38 +1,39 @@
-# SDN Firewall using POX and Mininet
+# SDN Path Tracing Tool using POX and Mininet
 
-## Objective
-This project blocks traffic from h1 to h3 using POX SDN controller.
-
-## Topology
-Single switch with 3 hosts.
-
-## Test Cases
-1. h1 ping h2 -> success
-2. h1 ping h3 -> blocked
-
-## Performance
-Ping latency + flow statistics
+## Problem Statement
+Identify and display the path taken by packets in an SDN network. Track flow rules, identify forwarding path, display route, and validate using tests.
 
 ## Tools Used
-- Ubuntu VM
 - Mininet
-- POX
+- POX Controller
 - Open vSwitch
+- Ubuntu
+
+## Setup Steps
+1. Install Mininet and POX
+2. Run POX controller:
+   ./pox.py log.level --DEBUG openflow.of_01 misc.firewall_controller
+3. Run Mininet:
+   sudo mn --topo single,3 --mac --switch ovsk --controller remote,ip=127.0.0.1,port=6633
+
+## Functionality
+- Controller handles PacketIn events
+- Installs flow rules dynamically
+- Displays packet path in logs
+- Blocks specific traffic (h1 → h3)
+
+## Test Cases
+
+### Test 1: Allowed Traffic
+h1 ping h2 → Success
+
+### Test 2: Blocked Traffic
+h1 ping h3 → 100% Packet Loss
+
+## Output
+- Packet path displayed in controller
+- Flow rules visible in switch
+- Network behavior validated using ping
 
 ## Screenshots
-
-### Allowed Ping
-![Allowed Ping](allowed_ping.png)
-
-### Blocked Ping
-![Blocked Ping](blocked_ping.png)
-
-### Flow Table
-![Flow Table](flow_table.png)
-
-### Controller Logs
-![Controller Logs](controller_logs.png)
-
-###topology_and_ping.png
-![topology_and_ping](topology_and_ping.png)
-
+(Add images here)
